@@ -13,7 +13,7 @@ public class DocumentController {
     private final DocumentService documentService;
 
     @GetMapping("/api/v1/document/{name}")
-    public Document getDocument(@PathVariable String name) {
+    public Document getDocument(@PathVariable("name") String name) {
         return documentService.getDocument(name);
     }
 }
