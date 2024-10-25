@@ -14,7 +14,7 @@ public class BookController {
     private final BookService bookService;
 
     @GetMapping("/api/v1/book/{name}")
-    public Employee getBook(@PathVariable String name) {
+    public Employee getBook(@PathVariable("name") String name) {
         return bookService.getBooks(name);
     }
 }
